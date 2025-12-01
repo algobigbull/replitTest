@@ -1,0 +1,166 @@
+You are building a production-ready, scalable Lead Management CRM for Bigbull Trading Academy (owner: Himanshu).
+Create a complete starter project including frontend, backend, database schema, seed data, and deployment instructions.
+
+Use Next.js 16 (TypeScript, App Router, TailwindCSS) and a MongoDB backend (connection URL stored in .env.local).
+
+Requirements
+1) Core CRM Features
+
+Lead Capture Form with fields:
+name, phone, email, interest (course), source (GMB/IG/Walk-in),
+funnelDay (0–7), status (Hot/Warm/Cold),
+nextAction, tags, notes,
+createdAt, lastContactedAt.
+
+Lead List Page
+
+Sortable & filterable by: Source, Status, Funnel Day, Next Action, Tags.
+
+Search by name / phone.
+
+Multi-select actions.
+
+Lead Detail Page
+
+Full timeline of notes & interactions.
+
+Edit lead fields, update funnel day/status.
+
+Schedule next action (text note + date/time).
+
+Follow-Up Templates
+
+Pre-built templates for Day 0–7.
+
+Ability to apply/send a template (simulate sending via logging).
+
+Send Lead Table Command
+
+Export currently filtered leads to CSV.
+
+Generate a compact table for copying into chat.
+
+Bulk Import / Export via CSV.
+
+Role-based Auth
+
+Admin: manage users
+
+Agent: view/update leads
+
+Mobile-responsive UI using TailwindCSS.
+
+Additional CRM Enhancements
+(AI-generated suggestions allowed) such as:
+
+Reminders dashboard
+
+Lead scoring
+
+Quick actions (call, WhatsApp, email simulation)
+
+Tag management
+
+Activity heatmap
+
+2) Tech Stack & Project Structure
+
+Next.js 16 (App Router, TypeScript, TailwindCSS)
+
+Backend: Next.js API Routes
+
+Database: MongoDB (URL in .env.local)
+
+Clean folder structure with separation of concerns (API, UI, hooks, lib, models).
+
+Include README with:
+
+Setup
+
+Running locally
+
+Deployment (Vercel)
+
+CSV import/export guide
+
+How to use “send lead table”
+
+3) API Design
+
+Implement clean, REST-style routes:
+
+POST /api/auth/login → returns { token }
+
+GET /api/leads?status=&source=&funnelDay=&q= → list leads
+
+POST /api/leads → create lead
+
+GET /api/leads/:id → fetch lead details
+
+PUT /api/leads/:id → update lead
+
+POST /api/leads/import → import CSV
+
+GET /api/leads/export → export CSV
+
+POST /api/leads/:id/actions → add note / schedule follow-up
+
+GET /api/templates → fetch follow-up templates
+
+POST /api/send-template → simulate sending a template
+
+4) UX / UI Requirements
+
+Dashboard
+
+Lead counts (Total, Hot, Warm, Cold)
+
+Quick filters
+
+Upcoming scheduled follow-ups
+
+Lead List
+
+Responsive table
+
+Multi-select bulk actions (assign agent, send template)
+
+Lead Detail
+
+Left: lead info
+
+Right: timeline, notes, actions
+
+Provide:
+
+Sample Tailwind components
+
+At least one responsive page mock
+
+Open/Closable Navbar
+
+Collapsed: icons only
+
+Expanded: full menu
+
+Smooth animations
+
+Responsive behaviour
+
+5) Deliverables
+
+Full frontend + backend code, including:
+
+Repository structure
+
+MongoDB models
+
+Basic migrations or initialization scripts
+
+Seed data (10 leads representing Bigbull’s funnel)
+
+README with run, deploy, and feature instructions
+
+Minimal unit tests for key API endpoints
+
+Ensure the project is production-ready, scalable, cleanly structured, and easy for Himanshu’s team to iterate on.
